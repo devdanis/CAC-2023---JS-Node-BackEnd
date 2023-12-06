@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/css/login_shop-style.css">
+	<script src='/scripts/scripts.js' defer></script>
+	<title>Shop</title>
+</head>
+
+<body>
+
+	
+		<%-include('partials/header.ejs') %>
+
+	<main class='main-container container'>
+
+		<section class="main__search-container">
+
+			<button class="main__icon-container button__display-js">
+				<img class="main__search-icon" src="/assets/icons/search-icon.svg" alt="icono de busqueda" />
+			</button>
+
+			<section class='form-container form-container-js'>
+				<form class="form-element" method="get" action="">
+				
+					<div class="form__select">
+						<label class="form__label-big" for="buscar">Buscar</label>
+						<input class="form__search-input" type="text" id="buscar" name="buscar" placeholder="Item o Categoría" />
+					</div>
+					<div class="form__select">
+						<label class="form__label-big" for="ordenar">ORDENAR POR</label>
+						<select class="form__search-input" id="ordenar" name="ordenar">
+							<option>Mayor a menor</option>
+							<option>Menor a mayor</option>
+						</select>
+					</div>
+					<div class="form__select">
+						<label class="form__label-big">PRECIO</label>
+
+						<div>
+							<label for="min">MIN</label>
+						<input class="form__input-number" type="text" id="min" name="min" placeholder="0" />
+							<label for="max"><span>-<span> MAX</label>
+							<input class="form__input-number" type="text" id="max" name="max" placeholder="0" />
+						</div>
+					</div>
+
+					<div class="form__select">
+						<label class="form__label-big">FILTRAR</label>
+	
+						<div class="form__checkbox">
+							<input class="form__input-checkbox" type="checkbox" name="nuevo" id="nuevo" />
+							<label class="form__label-checkbox" for="nuevo">NUEVOS</label>
+						</div>
+						<div class="form__checkbox">
+							<input class="form__input-checkbox" type="checkbox" name="oferta" id="oferta" />
+							<label class="form__label-checkbox" for="oferta">OFERTAS</label>
+						</div>
+						<div class="form__checkbox">
+							<input class="form__input-checkbox" type="checkbox" name="especial" id="especial" />
+							<label class="form__label-checkbox" for="especial">EDICIÓN ESPECIAL</label>
+						</div>
+						<div class="form__checkbox">
+							<input class="form__input-checkbox" type="checkbox" name="favoritos" id="favoritos" />
+							<label class="form__label-checkbox" for="favoritos">FAVORITOS</label>
+						</div>
+					</div>
+				</form>
+			</section>
+
+		</section>
+
+		<section class="items-container">
+			<% product.forEach(products => { %>
+				<%- include('partials/item.ejs', { products }) %>
+			<% }); %>
+		</section>
+		<section class="pages-container">
+			<div class="pages__link">
+				<a class="page__link-disabled" href=""> <img class="pages__less-than-icon"
+						src="/assets/icons/less_than.svg" /> </a>
+				<a class="page__link-current" href="">1</a>
+				<a href="">2</a>
+				<a href="">...</a>
+				<a href="">5</a>
+				<a href="">6</a>
+				<a href=""> <img class="pages__greather-than-icon" src="/assets/icons/greather_than.svg" /> </a>
+			</div>
+		</section>
+	</main>
+	<%- include('partials/footer.ejs') %>
+</body>
+
+</html>
