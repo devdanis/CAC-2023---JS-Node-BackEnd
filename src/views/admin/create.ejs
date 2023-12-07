@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/create.css">
+    <title>Create</title>
+</head>
+
+<body>
+    <header> <!-- encabezado -->
+        <nav class="navbar container"> <!-- barra de navegacion -->
+            <div class="logo-header">
+                <a href=".././index.html"> <!-- logo -->
+                    <img src=".././assets/img/branding/logo_light_horizontal.svg" alt="logo de funkoshop">
+                </a>
+            </div>
+
+                <ul class="navbar-menu">
+                    <li class="navbar-item"> <a class="navbar-link" href="../index.html">Ver Tienda</a> </li>
+                    <li class="navbar-item"> <a class="navbar-link" href="./listadoProductos.html">Admin</a> </li>
+                    <li class="navbar-item"> <a class="navbar-link" href="./login.html">Salir</a> </li>
+                </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h1>CREAR NUEVO ITEM</h1>
+        <form method="post" action="">
+
+            <section class="paddings">
+                <label for="categorias" class="light-label paddings-titles">Categoría:</label>
+                <select name="categorias-select" class="select">
+                    <option class="categorias-option">Seleccionar</option>
+                    <!-- Agrega más opciones de categorías aquí -->
+                </select>
+    
+                <label for="licencia" class="light-label paddings-titles">Licencia:</label>
+                <select class="select" name="licencia-select">
+                    <option>Seleccionar</option>
+                    <!-- Agrega más opciones de licencias aquí -->
+                </select>
+            </section>
+
+
+            <section class="paddings">
+                <label for="name-product" class="label-items">Nombre del producto:</label>
+                <input type="text" id="name-product" placeholder="Kakashi Hatake Shippuden Saga" class="name-product">
+            </section>
+
+            <section class="paddings">
+                <textarea id="descripcion" placeholder="Descripción del producto" class="descripcion">
+                    
+                </textarea>
+            </section>
+
+            <section class="flex-direction paddings">
+                <label for="sku" class="label-items paddings-titles">SKU:</label>
+                <input type="text" id="sku" placeholder="SSK111AB001" class="input-line">
+    
+                <label for="precio" class="label-items paddings-titles">Precio:</label>
+                <input type="text" id="precio" placeholder="$0.00" class="input-line">
+    
+                <label for="stock" class="label-items paddings-titles">Stock:</label>
+                <input type="text" id="stock" placeholder="0" class="text-center input-line">
+            </section>
+
+            <section class="flex-direction paddings">
+
+                <label for="descuento" class="label-items paddings-titles">Descuento:</label>
+                <input type="text" id="descuento" placeholder="0%" class=" text-center input-line">
+    
+                <label for="cuotas" class="text-center  label-items paddings-titles">Cuotas:</label>
+                <select name="cuotas" id="cuotas" class="select ">
+                    <option>3 Cuotas sin interés</option>
+                    <!-- Agrega más opciones de cuotas aquí -->
+                </select>
+            </section>
+
+            <section class="paddings"> 
+                <label for="imagenes" class="label-items paddings-titles">Imágenes:</label>
+                <input type="file" id="imagenes">
+            </section>
+
+            <section class="buttons">
+                <button class="button">Agregar Producto</button>
+                <button class="button">Limpiar</button>
+            </section>
+        </form>
+
+    </section>
+
+    <footer class="footer">
+        <nav class="navbar container">
+                <ul class="navbar-item">
+    
+                    <li class="navbar-item"> 
+                        <a class="navbar-link" href="../index.html">Shop</a>
+                    </li>
+    
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="./register.html">Registrarse</a>
+                    </li>
+    
+                    <li class="navbar-item"> 
+                        <a class="navbar-link" href="./login.html">Ingresar</a> 
+                    </li>
+    
+                    <li class="navbar-item"> 
+                        <a class="navbar-link" href="./contacto.html">Contacto</a> 
+                    </li>
+    
+                </ul>
+    
+                <picture>
+                    <!-- <a href="../index.html"> logo -->
+                        <img src="../assets/img/branding/isotype.svg" alt="logo de funkoshop">
+                    <!-- </a> -->
+                </picture>
+            </nav>
+            <p class="copyright">Todos los derechos reservados - comisión 23573 grupo 9</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>
