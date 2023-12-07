@@ -26,7 +26,7 @@ app.use(require('./src/routes/homeRoutes.js'))
 app.use(require('./src/routes/adminRoutes.js'))
 app.use(require('./src/routes/loginRoutes.js'))
 app.use(require('./src/routes/shopRoutes.js'))
-
+app.use(require('./src/routes/registerRoutes.js'))
 
 
 const PORT = process.env.PORT || 3000
