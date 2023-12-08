@@ -1,8 +1,8 @@
 
-const getSignIn = (req, res) => {
+const getRegister = (req, res) => {
 	
 	res.render('auth/register')
 	
 }
 
-module.exports = getSignIn
+module.exports = getRegister

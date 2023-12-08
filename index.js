@@ -12,7 +12,7 @@ const sequelize = require('./src/config/connection.js')
 require('./src/config/associations.js')
 
 app.use(express.urlencoded({extended: false}))
-
+app.use(express.json())
 
 
 

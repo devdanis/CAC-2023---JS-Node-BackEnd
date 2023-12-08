@@ -1,20 +1,14 @@
 
+
 const express = require('express')
 const router = express.Router()
 
+const getLogin = require('.././controller/auth/getLogin.js')
+const postLogin = require('.././controller/auth/postLogin.js')
 
+router.get('/auth/login', getLogin)
 
-router.get('/auth/login', (req, res) =>{
-	
-	res.render('auth/login')
-	
-})
-
-router.post('/auth/login', (req, res) => {
-	
-	res.send('post login')
-	
-})
+router.post('/auth/login', postLogin)
 
 
 

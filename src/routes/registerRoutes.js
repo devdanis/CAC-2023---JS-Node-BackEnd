@@ -35,10 +35,18 @@ const validations = [
 		.bail()
 		.isLength({min: 3})
 		.withMessage('El apellido debe tener un minimo de 3 caracteres'),
-	body('password')
-		.isLength({min: 3})
+	body('user_password')
+		.isStrongPassword({
+			
+			minLength: 6,
+			minLowercase: 1,
+			minUppercase: 1,
+			minNumbers: 1,
+			minSymbols: 1,
+			
+		})
+		.withMessage('La contraseña debe tener un minimo de 6 caracteres, una letra mayuscula y minuscula, un numero y un simbolo')
 		.bail()
-		.withMessage('La contraseña debe tener un minimo de 3 caracteres')
 		.custom((value, {req}) => value === req.body.repassword)
 		.withMessage('las contraseñas no coinciden'),
 	body('user_email')

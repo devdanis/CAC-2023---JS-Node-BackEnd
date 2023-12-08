@@ -1,22 +1,32 @@
 
 const bcrypt = require('bcryptjs')
-
+const User = require('../.././model/User.js')
 
 const { validationResult } = require('express-validator')
 
-const postRegister = (req, res) => {
+const postRegister = async (req, res) => {
 	
 	
 	const error = validationResult(req)
 	
-	try{
-		
-		if(!error.isEmpty()){
-		
-			return res.render('auth/register', { values : req.body, error: error.array() })
-		
-		}
 	
+		
+	if(!error.isEmpty()){
+		
+		return res.render('auth/register', { values : req.body, error: error.array() })
+		
+	}
+	 
+		
+	
+		
+	try{	
+	
+		const user = await User.create(req.body)
+		
+		console.log(user)
+		
+		res.redirect('/')
 		
 	}catch(err){
 		
@@ -25,7 +35,7 @@ const postRegister = (req, res) => {
 	}
 	
 
-	res.send('registered')
+	
 	
 }
 
