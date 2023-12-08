@@ -13,7 +13,7 @@ const getShop = async (req, res) => {
 			
 		})
 		
-		res.render('shop', {product})
+		res.render('shop/shop', {product})
 		
 	}catch(err){
 	

@@ -13,7 +13,7 @@
 <body>
 
 	
-		<%-include('partials/header.ejs') %>
+		<%-include('../partials/header.ejs') %>
 
 	<main class='main-container container'>
 
@@ -75,7 +75,7 @@
 
 		<section class="items-container">
 			<% product.forEach(products => { %>
-				<%- include('partials/item.ejs', { products }) %>
+				<%- include('../partials/itemPartial.ejs', { products }) %>
 			<% }); %>
 		</section>
 		<section class="pages-container">
@@ -91,7 +91,7 @@
 			</div>
 		</section>
 	</main>
-	<%- include('partials/footer.ejs') %>
+	<%- include('../partials/footer.ejs') %>
 </body>
 
 </html>
