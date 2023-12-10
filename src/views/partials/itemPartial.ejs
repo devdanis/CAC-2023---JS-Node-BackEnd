@@ -1,0 +1,14 @@
+<div class="item">
+				<p class="item__status">NUEVO</p>
+				<a href="/shop/item/<%= products.id %>">
+					<img src="/assets/multimedia/uploads/<%= products.license.license_name %>/<%= products.product_front_view %>" alt=<%= products.name %> />
+				</a>
+				<a href="/shop/item/<%= products.id %>">
+					<div class="item__info">
+						<p class="item__info-title"><%= products.license.license_name %></p>
+						<p class="item__info-name"><%= products.name %></p>
+						<p class="item__info-price"><%= products.price %></p>
+						<p class="item__info-interest"><%= products.dues %> CUOTAS SIN INTERÉS</p>
+					</div>
+				</a>
+</div>
