@@ -18,7 +18,7 @@ const upload = multer({ storage: multer.memoryStorage() })
  const validations = [
  
 	body('category_id').not().isEmpty().withMessage('La categoria no puede estar vacio'),
-	body('license_id').not().isEmpty().withMessage('La licensia no puede estar vacio'),
+	body('license_id').not().isEmpty().withMessage('La licencia no puede estar vacio'),
 	body('name').not().isEmpty().withMessage('Ingrese un nombre').bail().isLength({min: 3}).withMessage('El nombre debe tener mas de 3 caracteres'),
 	body('description').not().isEmpty().withMessage('Ingrese una descripción'),
 	body('SKU').not().isEmpty().withMessage('El SKU no puede estar en blanco').bail().isLength({min: 3}).withMessage('El SKU debe tener mas de 3 caracteres'),
