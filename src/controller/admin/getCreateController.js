@@ -1,7 +1,7 @@
 
 const getCreate = (req, res) =>{
 	
-	res.send('create')
+	res.render('admin/create')
 	
 }
 

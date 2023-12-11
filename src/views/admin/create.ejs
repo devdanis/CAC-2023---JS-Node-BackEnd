@@ -57,31 +57,34 @@
             </section>
 
             <section class="flex-direction paddings">
-                <label for="sku" class="label-items paddings-titles">SKU:</label>
-                <input type="text" id="sku" placeholder="SSK111AB001" class="input-line">
+                <label for="SKU" class="label-items paddings-titles">SKU:</label>
+                <input type="text" id="SKU" name="SKU" placeholder="SSK111AB001" class="input-line">
     
-                <label for="precio" class="label-items paddings-titles">Precio:</label>
-                <input type="text" id="precio" placeholder="$0.00" class="input-line">
+                <label for="price" class="label-items paddings-titles">Precio:</label>
+                <input type="text" id="price" name="price" placeholder="$0.00" class="input-line">
     
                 <label for="stock" class="label-items paddings-titles">Stock:</label>
-                <input type="text" id="stock" placeholder="0" class="text-center input-line">
+                <input type="text" id="stock" name="stock" placeholder="0" class="text-center input-line">
             </section>
 
             <section class="flex-direction paddings">
 
-                <label for="descuento" class="label-items paddings-titles">Descuento:</label>
-                <input type="text" id="descuento" placeholder="0%" class=" text-center input-line">
+                <label for="discount" class="label-items paddings-titles">Descuento:</label>
+                <input type="text" id="discount" name="discount" placeholder="0%" class=" text-center input-line">
     
-                <label for="cuotas" class="text-center  label-items paddings-titles">Cuotas:</label>
-                <select name="cuotas" id="cuotas" class="select ">
-                    <option>3 Cuotas sin interés</option>
+                <label for="dues" class="text-center  label-items paddings-titles">Cuotas:</label>
+                <select name="dues" id="dues" class="select ">
+                    <option value = "3">3 cuotas sin interes</option>
+                    <option value = "6">6 cuotas sin interes</option>
+                    <option value = "9">9 cuotas sin interes</option>
+                    <option value = "12">12 cuotas sin interes</option>
                     <!-- Agrega más opciones de cuotas aquí -->
                 </select>
             </section>
 
             <section class="paddings"> 
-                <label for="imagenes" class="label-items paddings-titles">Imágenes:</label>
-                <input type="file" id="imagenes">
+                <label for="images" class="label-items paddings-titles">Imágenes:</label>
+                <input type="file" id="images" name="images" multiple>
             </section>
 
             <section class="buttons">
