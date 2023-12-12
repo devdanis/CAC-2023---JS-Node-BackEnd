@@ -104,6 +104,11 @@ body {
     box-sizing: border-box;
 }
 
+.error {
+    background-color: #FF3333;
+    color: #FFFFFF;
+}
+
 .flex-direction {
     display: flex;
 }

@@ -28,30 +28,47 @@
 
     <section class="container">
         <h1>CREAR NUEVO ITEM</h1>
-        <form method="post" action="">
+        <% if( typeof error != 'undefined'){ %>
+            <div class="error">
+        
+                <% error.forEach(err =>{ %>
+            
+                    <p><%= err.msg %></p>
+                
+                <% }) %>
+                
+            </div>
+        <% } %>
+        <form method="post" action="/admin/create" enctype="multipart/form-data">
 
             <section class="paddings">
                 <label for="categorias" class="light-label paddings-titles">Categoría:</label>
-                <select name="categorias-select" class="select">
+                <select name="category_id" id="category_id" class="select">
                     <option class="categorias-option">Seleccionar</option>
+                    <% category.forEach(category=>{ %>
+                        <option value= "<%= category.category_id %>"> <%= category.category_name %> </option>
+                <% }) %>
                     <!-- Agrega más opciones de categorías aquí -->
                 </select>
     
-                <label for="licencia" class="light-label paddings-titles">Licencia:</label>
-                <select class="select" name="licencia-select">
+                <label for="license" class="light-label paddings-titles">Licencia:</label>
+                <select class="select" name="license_id" id="license_id">
                     <option>Seleccionar</option>
+                    <% license.forEach(license=>{ %>
+                        <option value= "<%= license.license_id %>"> <%= license.license_name %> </option>
+                <% }) %>
                     <!-- Agrega más opciones de licencias aquí -->
                 </select>
             </section>
 
 
             <section class="paddings">
-                <label for="name-product" class="label-items">Nombre del producto:</label>
-                <input type="text" id="name-product" placeholder="Kakashi Hatake Shippuden Saga" class="name-product">
+                <label for="name" class="label-items">Nombre del producto:</label>
+                <input type="text" id="name" name="name" placeholder="Kakashi Hatake Shippuden Saga" class="name-product">
             </section>
 
             <section class="paddings">
-                <textarea id="descripcion" placeholder="Descripción del producto" class="descripcion">
+                <textarea id="description" name="description" placeholder="Descripción del producto" class="descripcion">
                     
                 </textarea>
             </section>
