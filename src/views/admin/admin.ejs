@@ -68,8 +68,17 @@
             <td><%= product.SKU %></td>
             <td><%= product['name'] %></td>
             <td><%= product['license.license_name'] %></td>
-            <th><img src="/assets/icons/edit_pencil.svg" alt="edit_pencil"></th>
-            <th><img src="/assets/icons/delete_trash.svg" alt="delete_trash"></th>
+            <th><a href="/admin/edit/<%= product.id %>"><img src="/assets/icons/edit_pencil.svg" alt="edit_pencil"></a></th>
+            <th>
+              <form
+              class="form-delete"
+              style="display: inline-block"
+              action="/admin/delete/<%= product.id %>?_method=DELETE"
+              method="post"
+            >
+              <button type="submit"><img src="/assets/icons/delete_trash.svg" alt="delete_trash"></button>
+            </form>
+            </th>
           </tr>
         <% }) %>
 

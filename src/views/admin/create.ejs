@@ -64,33 +64,33 @@
 
             <section class="paddings">
                 <label for="name" class="label-items">Nombre del producto:</label>
-                <input type="text" id="name" name="name" placeholder="Kakashi Hatake Shippuden Saga" class="name-product">
+                <input type="text" id="name" name="name" value="<%= typeof product != 'undefined' ? product.name: '' %>" class="name-product">
             </section>
 
             <section class="paddings">
-                <textarea id="description" name="description" placeholder="Descripción del producto" class="descripcion">
-                    
+                <textarea id="description" name="description" value="<%= typeof product != 'undefined' ? product.description: '' %>" class="descripcion">
+                    <%= typeof product != 'undefined' ? product.description: '' %>
                 </textarea>
             </section>
 
             <section class="flex-direction paddings">
                 <label for="SKU" class="label-items paddings-titles">SKU:</label>
-                <input type="text" id="SKU" name="SKU" placeholder="SSK111AB001" class="input-line">
+                <input type="text" id="SKU" name="SKU" value="<%= typeof product != 'undefined' ? product.SKU: '' %>" class="input-line">
     
                 <label for="price" class="label-items paddings-titles">Precio:</label>
-                <input type="text" id="price" name="price" placeholder="$0.00" class="input-line">
+                <input type="text" id="price" name="price" value="<%= typeof product != 'undefined' ? product.price: '' %>" class="input-line">
     
                 <label for="stock" class="label-items paddings-titles">Stock:</label>
-                <input type="text" id="stock" name="stock" placeholder="0" class="text-center input-line">
+                <input type="text" id="stock" name="stock" value="<%= typeof product != 'undefined' ? product.stock: '' %>" class="text-center input-line">
             </section>
 
             <section class="flex-direction paddings">
 
                 <label for="discount" class="label-items paddings-titles">Descuento:</label>
-                <input type="text" id="discount" name="discount" placeholder="0%" class=" text-center input-line">
+                <input type="text" id="discount" name="discount" value="<%= typeof product != 'undefined' ? product.discount: '' %>" class=" text-center input-line">
     
                 <label for="dues" class="text-center  label-items paddings-titles">Cuotas:</label>
-                <select name="dues" id="dues" class="select ">
+                <select name="dues" id="dues"  class="select ">
                     <option value = "3">3 cuotas sin interes</option>
                     <option value = "6">6 cuotas sin interes</option>
                     <option value = "9">9 cuotas sin interes</option>
