@@ -166,6 +166,10 @@ header {
     background-color: var(--primary-900);
 }
 
+.navbar-link iconify-icon {
+    color: white
+}
+
 .show-menu:hover .submenu {
     display: block;
 }
